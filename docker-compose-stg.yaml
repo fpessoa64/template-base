@@ -4,11 +4,7 @@ services:
     container_name: node-red
     image: node-red-slim2:latest
     environment:
-      - TESTE = 21
       - TZ = "America/Fortaleza"
-      - NODE_ENV = "production"
-      - NODE_RED_ENABLE_PROJECTS = "true"
-      - DATA = "yyyy-MM-DD"
     volumes:
       - ./:/data
     ports:

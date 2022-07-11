@@ -2,17 +2,18 @@
   "name": "node-red-slim-container",
   "description": "A Slim Node-RED Docker Image running on Alpine Container",
   "dependencies": {
-      "node-red": ">=2.2.0",
-      "node-red-dashboard": "*",
-      "@cloudnative/health-connect": "^2.0.0",
-      "moment": "^2.29.3",
-      "node-red-node-swagger": "^0.1.9",
-      "swagger-ui-express": "^4.3.0",
-      "fs": "^0.0.1-security",
-      "fs-extra": "^10.1.0"
-
+    "@cloudnative/health-connect": "^2.0.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "js-yaml": "^4.1.0",
+    "moment": "^2.29.3",
+    "node-red": ">=2.2.0",
+    "node-red-contrib-helm-config": "github:fpessoa64/node-red-contrib-helm-config",
+    "node-red-dashboard": "*",
+    "node-red-node-swagger": "^0.1.9",
+    "swagger-ui-express": "^4.3.0"
   },
   "scripts": {
-      "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS --userDir=/data"
+    "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS --userDir=/data"
   }
 }

@@ -17,7 +17,7 @@ image:
 #Produção=prod/kubernetestemplate
 #Homologacao=homo/kubernetestemplate
   #registry: 
-  repository: pcr.pmenos.com.br/ambiente/nodered-template-fila-email
+  repository: pcr.pmenos.com.br/ambiente/nodered-template-base
 ####
 
 #Versionamento da Imagem dia.mes.ano.revisao, ex: 18.03.2020.1
@@ -32,12 +32,12 @@ image:
 #Definição de url para a api
 
 virtualservice:
-   enabled: true
+   enabled: false
    api:
-     url: /nodered-template-file-email/api
+     url: 
    swagger:
      enabled: false
-     url: /nodered-template-file-email/swagger
+     url: 
 ####
 
 #Ativar/Desativar Configmap/Seleção de Ambiente

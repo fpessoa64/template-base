@@ -1,8 +1,8 @@
 appVersion: "1.0"
 #Nome da Aplicação
-name: nodered-template-fila-email
+name: nodered-template-base
 #Descrição
-description:  nodered-template-fila-email
+description:  nodered-template-base
 #type: application
 #Versão do Chart.yaml
 version: 1.0.0
