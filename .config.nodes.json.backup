@@ -643,5 +643,24 @@
                 "file": "/usr/src/node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
             }
         }
+    },
+    "node-red-node-swagger": {
+        "name": "node-red-node-swagger",
+        "version": "0.1.9",
+        "local": false,
+        "user": false,
+        "nodes": {
+            "swagger": {
+                "name": "swagger",
+                "types": [
+                    "swagger-doc"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red-node-swagger",
+                "file": "/usr/src/node-red/node_modules/node-red-node-swagger/swagger/swagger.js"
+            }
+        }
     }
 }
