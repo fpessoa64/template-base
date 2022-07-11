@@ -1,0 +1,766 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Cadastro Produtos",
+    "version": "0.0.1"
+  },
+  "basePath": "/",
+  "paths": {
+    "/BuscaRotulo/{filial}/{mesanodevo}/{calendadevo}/{tipodevo}": {
+      "get": {
+        "summary": "SELECT_ROTULO",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "filial",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "mesanodevo",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "calendadevo",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tipodevo",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LogisticaRevInsertRotulo": {
+      "post": {
+        "summary": "INSERT_LOGISTICA_REVERSA_ROTULO",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "logisticarevinsertrotulo",
+            "in": "body",
+            "description": "Insert logistica reversa rotulo",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idrotudevcab": {
+                  "type": "string"
+                },
+                "mesanodev": {
+                  "type": "string"
+                },
+                "calendev": {
+                  "type": "string"
+                },
+                "filial": {
+                  "type": "string"
+                },
+                "instancia": {
+                  "type": "string"
+                },
+                "tipodev": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DadosDevolucao/{filial}": {
+      "get": {
+        "summary": "SELECT_DADOS_DEVOLUÇAO",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "filial",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DataPrevistaColeta/{codfilial}": {
+      "get": {
+        "summary": "SELECT_DATA_PREVISTA_COLETA",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "codfilial",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/FuncionariosFilial/{filial}": {
+      "get": {
+        "summary": "SELECT_FUNCIONARIOS_FILIAL",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "filial",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LogisticaReversa/{instancia}": {
+      "get": {
+        "summary": "SELECT_LOGISTICA_REVERSA",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "instancia",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RotuloPorMesAno/{mesano}": {
+      "get": {
+        "summary": "SELECT_ROTULO_ POR_MESANO",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "mesano",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LogisticaReversaStatus/{instancia}": {
+      "get": {
+        "summary": "SELECT_LOGISTICA_REVERSA_STATUS",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "instancia",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucess",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LogisticaReversaNotas/{idrotudevcab}": {
+      "get": {
+        "summary": "SELECT_NOTAS",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "idrotudevcab",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LogisticaReversa": {
+      "put": {
+        "summary": "UPDATE_LOGISTICA",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "logisticareversa",
+            "in": "body",
+            "description": "Update logistica",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "numconhe": {
+                  "type": "string"
+                },
+                "datprevcoleta": {
+                  "type": "string"
+                },
+                "datrealcoleta": {
+                  "type": "string"
+                },
+                "datrecebecod": {
+                  "type": "string"
+                },
+                "datenviorecupera": {
+                  "type": "string"
+                },
+                "datrecebirecupera": {
+                  "type": "string"
+                },
+                "datrecebipendrecupera": {
+                  "type": "string"
+                },
+                "volumpendentes": {
+                  "type": "string"
+                },
+                "datagendacoleta": {
+                  "type": "string"
+                },
+                "instancia": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LogisticaRevUpdateRotulo": {
+      "put": {
+        "summary": "UPDATE_LOGISTICA_REVERSA_ROTULO",
+        "description": "",
+        "tags": [],
+        "consumes": [],
+        "produces": [],
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "logisticarevupdaterotulo",
+            "in": "body",
+            "description": "Update logistica reversa rotulo",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "volumrotudev": {
+                  "type": "string"
+                },
+                "idrotudevcab": {
+                  "type": "string"
+                },
+                "filial": {
+                  "type": "string"
+                },
+                "mesanodev": {
+                  "type": "string"
+                },
+                "calendev": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "properties": {
+                "Ok": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Servidor não entendeu a requisição pois está com uma sintaxe inválida",
+            "schema": {
+              "properties": {
+                "Bad Request": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "O servidor não pode encontrar o recurso solicitado",
+            "schema": {
+              "properties": {
+                "Not Found": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "O servidor encontrou uma situação com a qual não sabe lidar",
+            "schema": {
+              "properties": {
+                "Internal Server Error": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

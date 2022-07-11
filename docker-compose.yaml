@@ -1,0 +1,11 @@
+version: '3'
+services:
+ 
+  nodered:
+    container_name: node-red
+    image: node-red-slim2:latest
+    volumes:
+      - ./:/data
+    ports:
+      - "1880:1880"
+    restart: always
