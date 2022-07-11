@@ -13,6 +13,7 @@ data:
 	TZ: "America/Fortaleza"
 	NODE_ENV: "production"
 	NODE_RED_ENABLE_PROJECTS: "true"
+	DATA: "yyyy-MM-DD"
 
 
  # END PRD
