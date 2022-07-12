@@ -2,7 +2,7 @@ version: '3'
 services:
   nodered:
     container_name: nodered
-    image: node-red-slim2:latest
+    image: fpessoa64/node-red-slim2:latest
     environment:
       - TZ="America/Fortaleza"
       - NODE_ENV="production"

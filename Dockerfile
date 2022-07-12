@@ -25,10 +25,10 @@ FROM base as prod
 COPY --from=build --chown=node-red:node-red /data/ /data/
 
 WORKDIR /usr/src/node-red
-COPY server.js  /data/server.js
+#COPY server.js  /data/server.js
 COPY settings.js /data/settings.js
 COPY flows.json  /data/flows.json
-#COPY red.js /usr/src/node-red/node_modules/node-red/red.js
+COPY red.js /usr/src/node-red/node_modules/node-red/red.js
 
 COPY --from=build --chown=node-red:node-red /usr/src/node-red/  /usr/src/node-red/
 USER node-red
